@@ -1,0 +1,23 @@
+problem::
+Given an array of positive integers arr[], return the second largest element from the array. If the second largest element doesn't exist then return -1.
+Note: The second largest element should not be equal to the largest element.
+Constraints:
+2 ≤ arr.size() ≤ 105
+1 ≤ arr[i] ≤ 105
+
+  
+  solution::
+    class Solution:
+    def getSecondLargest(self, arr):
+        max=smax=-1
+        for i in arr:
+            if i>max:
+                smax=max
+                max=i
+            elif i>smax and i!=max:
+                smax=i
+                
+        if smax==-1:
+            return -1
+        else:
+            return(smax)
